@@ -42,6 +42,7 @@ public class ExecutaCurso {
 		//registerPage.selecionaSkill("Java");
 		registerPage.selecionaSkills("Java");
 		aguardaTempo(3000);
+		
 	}
 		
 	
