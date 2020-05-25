@@ -84,9 +84,18 @@ public class Element {
 		return elements;
 	}
 	
-	public void clickElementText(String valor) {
+	public void clickElementValue(String valor) {
 		for (WebElement webElement : createElements()) {
 			if (webElement.getAttribute("value").equals(valor)) {
+				webElement.click();
+				break;
+			}
+		}
+	}
+	
+	public void clickElementText(String valor) {
+		for (WebElement webElement : createElements()) {
+			if (webElement.getText().equals(valor)) {
 				webElement.click();
 				break;
 			}
