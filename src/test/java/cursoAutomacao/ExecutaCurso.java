@@ -1,5 +1,6 @@
 package cursoAutomacao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.After;
@@ -31,16 +32,28 @@ public class ExecutaCurso {
 		registerPage.setLastName("Luchini");
 		registerPage.setEndereco("Rua Mauro");
 		registerPage.setEmail("adamvinicius@gmail.com");
-		registerPage.setTelefone("1145215421");
-		registerPage.validaTelefone("1145215421");
+		registerPage.setTelefone("1145215422");
+		registerPage.validaTelefone("1145215422");
 		registerPage.clickGenero("Male");
 		registerPage.clickHobbie("Movies");
 		registerPage.clickHobbie("Hockey");
 		String caminhoArquivo = System.getProperty("user.dir")+"\\files\\teste.jpg";
 		registerPage.setFile(caminhoArquivo);
 		registerPage.validaLogo("original.png");
-		//registerPage.selecionaSkill("Java");
+		
+		List<String> languages = new ArrayList<String>();
+		languages.add("Portuguese");
+		languages.add("English");
+		registerPage.selecionaLanguages(languages);
 		registerPage.selecionaSkills("Java");
+		registerPage.selecionaCountry("Brazil");
+		registerPage.selecionaCountryDois("Australia");
+		registerPage.selecionaYear("1988");
+		registerPage.selecionaMonth("October");
+		registerPage.selecionaDay("12");
+		registerPage.setPassword("Teste123");
+		registerPage.setCofirmPassword("Teste123");
+		//registerPage.clickSubmit();
 		aguardaTempo(3000);
 		
 	}
