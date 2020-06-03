@@ -28,6 +28,6 @@ public class RegisterMap {
 	public Element confirmPassword = new Element("secondpassword", ByValue.id);
 	public Element submit = new Element("submitbtn", ByValue.id);
 	
-	
+
 	
 }
