@@ -7,8 +7,6 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import core.Driver;
 import page.RegisterPage;
@@ -31,7 +29,7 @@ public class ExecutaCurso {
 		registerPage.setFirstName("Adam");
 		registerPage.setLastName("Luchini");
 		registerPage.setEndereco("Rua Mauro");
-		registerPage.setEmail("adamvinicius@gmail.com");
+		registerPage.setEmail("automacaoTurma4@gmail.com");
 		registerPage.setTelefone("1145215422");
 		registerPage.validaTelefone("1145215422");
 		registerPage.clickGenero("Male");
@@ -53,21 +51,12 @@ public class ExecutaCurso {
 		registerPage.selecionaDay("12");
 		registerPage.setPassword("Teste123");
 		registerPage.setCofirmPassword("Teste123");
-		//registerPage.clickSubmit();
-		aguardaTempo(3000);
+		registerPage.clickSubmit();
+		Driver.aguardaTempo(3000);
 		
 	}
 		
-	
-	public void aguardaTempo(long tempo) {
-		Thread.currentThread();
-		try {
-			Thread.sleep(tempo);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+		
 	
 	@Before
 	public void abreNavegador() {
@@ -76,7 +65,7 @@ public class ExecutaCurso {
 	
 	@After
 	public void fechaNavegador() {
-		Driver.getDriver().quit();
+		//Driver.getDriver().quit();
 	}
 	
 	public int soma(int a, int b) {
